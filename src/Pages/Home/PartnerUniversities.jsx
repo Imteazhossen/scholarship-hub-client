@@ -35,13 +35,13 @@ const partners = [
 export default function PartnerUniversities() {
   return (
     <section className="py-12 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-4">
+      <h2 className="text-4xl  font-bold text-center mb-4">
         Our Partner Universities
       </h2>
-      <p className="text-center text-gray-600 mb-8">
-        We collaborate with the world’s top institutions to bring you premier scholarship opportunities.
+      <p className="text-center px-4 text-gray-600 mb-8">
+        We collaborate with the world's top institutions to bring you premier scholarship opportunities.
       </p>
-      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {partners.map((uni) => (
           <div
             key={uni.name}

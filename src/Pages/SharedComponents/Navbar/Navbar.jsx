@@ -16,7 +16,7 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="font-inter rounded-2xl navbar bg-gradient-to-r from-pink-50 from-10% via-sky-100 via-30% to-emerald-50 to-90%  w-full  md:px-7 md:mx-auto">
+        <div className="font-inter sm:rounded-2xl navbar bg-gradient-to-r from-pink-50 from-10% via-sky-100 via-30% to-emerald-50 to-90%  w-full  md:px-7 md:mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost  -ml-5 sm:-ml-0  lg:hidden">

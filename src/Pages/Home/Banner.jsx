@@ -8,7 +8,7 @@ import bannerImage3 from '../../assets/BannerImages/bannerImage3.png';
 const Banner = () => {
   return (
     // set whatever height you like here (h-48 = 12rem = 192px, h-64 = 16rem = 256px, etc.)
-    <div className="rounded-2xl my-12 overflow-hidden">
+    <div className="rounded-2xl md:my-12 my-5 overflow-hidden">
       <Carousel
         autoPlay
         infiniteLoop
