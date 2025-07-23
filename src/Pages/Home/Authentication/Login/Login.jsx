@@ -17,7 +17,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 p-4">
       <div className="card w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
         <div className="p-8">
-          <h1 className="text-4xl font-bold text-center text-gray-600 mb-2">
+          <h1 className="text-3xl font-bold text-center text-gray-600 mb-2">
             Login!
           </h1>
           <p className="text-center text-gray-500 mb-6">
