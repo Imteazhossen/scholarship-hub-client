@@ -1,8 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import Social from '../../../SharedComponents/Social/Social';
+import useAuth from '../../../../Hooks/useAuth';
 
 export default function Login() {
   const {
@@ -10,8 +11,27 @@ export default function Login() {
     handleSubmit,
     formState: { errors }
   } = useForm();
+  const {currentUser} = useAuth();
+  console.log(currentUser);
 
-  const onSubmit = data => console.log(data);
+
+    const {signIn} = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const form = location.state?.form || '/';
+
+    const onSubmit = (data) => {
+        signIn(data.email, data.password)
+        .then(result => {
+            console.log(result.user);
+            navigate(form);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 p-4">
