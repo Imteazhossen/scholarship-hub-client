@@ -6,6 +6,8 @@ import Home from "../Pages/Home/Home";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Home/Authentication/Login/Login";
 import Register from "../Pages/Home/Authentication/Register/Register";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +18,17 @@ export const router = createBrowserRouter([
             index: true,
             Component: Home,
         },
+        {
+            path:'dashboard',
+            element: <DashboardLayout></DashboardLayout>,
+            children: [
+                {
+                    index: true,
+                    Component: DashboardHome,
+                },
+                
+            ]
+        }
 
     ]
   },

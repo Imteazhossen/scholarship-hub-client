@@ -79,7 +79,7 @@ const Navbar = () => {
         <div className="navbar bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 px-4 md:px-8 py-3 shadow-md">
             {/* Start: logo and mobile menu */}
             <div className="navbar-start">
-                <div className="dropdown lg:hidden">
+                <div className="dropdown -ml-4 sm:-ml-0 lg:hidden">
                     <label tabIndex={0} className="btn btn-ghost p-2">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
