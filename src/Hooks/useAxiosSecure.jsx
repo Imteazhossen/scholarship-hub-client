@@ -1,46 +1,52 @@
+// src/Hooks/useAxiosSecure.jsx
+import { useEffect } from 'react';
 import axios from 'axios';
-import React from 'react';
-import useAuth from './useAuth';
 import { useNavigate } from 'react-router';
+import useAuth from './useAuth';
 
 const axiosSecure = axios.create({
-    baseURL: `http://localhost:5000/`
-})
+  baseURL: 'http://localhost:5000', // e.g. http://localhost:5000
+});
 
-const useAxiosSecure = () => {
-    const { user, logOut } = useAuth();
-    const navigate = useNavigate()
+export default function useAxiosSecure() {
+  const { user, logOut } = useAuth();
+  const navigate = useNavigate();
 
-    axiosSecure.interceptors.request.use(config => {
-        config.headers.Authorization = `Bearer ${user.accessToken}`
+  useEffect(() => {
+    // 1) REQUEST interceptor
+    const reqInterceptor = axiosSecure.interceptors.request.use(
+      async (config) => {
+        if (user) {
+          // Grab a fresh Firebase ID token
+          const token = await user.getIdToken();
+          config.headers.Authorization = `Bearer ${token}`;
+        }
         return config;
-    }, error => {
-        return Promise.reject(error);
-    })
+      },
+      (error) => Promise.reject(error)
+    );
 
-
-    axiosSecure.interceptors.response.use(res => {
-        return res;
-    }, error => {
-        console.log('inside res interceptor', error.status);
-        const status = error.status;
-        if (status === 403) {
-            navigate('/forbidden');
+    // 2) RESPONSE interceptor
+    const resInterceptor = axiosSecure.interceptors.response.use(
+      (res) => res,
+      (error) => {
+        const status = error.response?.status;
+        if (status === 401) {
+          // Not authenticated → force logout & redirect
+          logOut().finally(() => navigate('/login'));
+        } else if (status === 403) {
+          navigate('/forbidden');
         }
-        else if (status === 401) {
-            logOut()
-                .then(() => {
-                    navigate('/login');
-                })
-                .catch(() => { })
-
-        }
-
         return Promise.reject(error);
-    });
+      }
+    );
 
+    // 3) Cleanup on unmount / re‑run
+    return () => {
+      axiosSecure.interceptors.request.eject(reqInterceptor);
+      axiosSecure.interceptors.response.eject(resInterceptor);
+    };
+  }, [user, logOut, navigate]);
 
-    return axiosSecure;
-};
-
-export default useAxiosSecure;
+  return axiosSecure;
+}
