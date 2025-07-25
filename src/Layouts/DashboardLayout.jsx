@@ -97,7 +97,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/user/applications" className={linkClasses}>
+                                        <NavLink to="/dashboard/applications" className={linkClasses}>
                                             <FaClipboardList className="mr-3 text-sky-600" /> My Applications
                                         </NavLink>
                                     </li>

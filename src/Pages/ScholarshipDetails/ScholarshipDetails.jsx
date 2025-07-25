@@ -60,10 +60,10 @@ export default function ScholarshipDetails() {
 
     const rating = scholarship.rating ?? 0;
 
-    const handleApply = () => navigate(`/apply/${id}`);
+    const handleApply = () => navigate(`/payment/${id}`);
 
     return (
-        <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50">
+        <section className="py-16 mb-10 rounded-b-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50">
             <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
                 {/* Details */}
                 <div className="md:flex">
