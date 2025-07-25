@@ -6,6 +6,7 @@ import Loading from '../../SharedComponents/Loading/Loading';
 import UserDashboard from '../OtherDashboards/UserDashboard';
 import AdminDashboard from '../OtherDashboards/AdminDashboard';
 import ModeratorDashboard from '../OtherDashboards/ModeratorDashboard';
+import Forbidden from '../../Forbidden/Forbidden';
 
 
 const DashboardHome = () => {

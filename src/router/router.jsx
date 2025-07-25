@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+    createBrowserRouter,
 } from "react-router";
 import RootLayout from "../Layouts/RootLayout";
 import Home from "../Pages/Home/Home";
@@ -8,43 +8,46 @@ import Login from "../Pages/Home/Authentication/Login/Login";
 import Register from "../Pages/Home/Authentication/Register/Register";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import DashboardHome from "../Pages/Dashboard/DashboardHome/DashboardHome";
+import AddScholarship from "../Pages/Dashboard/DashboardHome/Moderator/AddScholarship";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: RootLayout,
-    children: [
-        {
-            index: true,
-            Component: Home,
-        },
-        {
-            path:'dashboard',
-            element: <DashboardLayout></DashboardLayout>,
-            children: [
-                {
-                    index: true,
-                    Component: DashboardHome,
-                },
-                
-            ]
-        }
+    {
+        path: "/",
+        Component: RootLayout,
+        children: [
+            {
+                index: true,
+                Component: Home,
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                index: true,
+                Component: DashboardHome
+            },
+            {
+                path: "addScholarships",
+                element: <AddScholarship></AddScholarship>
+            }
+        ]
+    },
+    {
+        path: '/',
+        Component: AuthLayout,
+        children: [
+            {
+                path: 'login',
+                element: <Login></Login>
+            },
+            {
+                path: 'register',
+                element: <Register></Register>
+            },
+        ]
 
-    ]
-  },
-  {
-    path: '/',
-    Component: AuthLayout,
-    children: [
-        {
-            path: 'login',
-            element: <Login></Login>
-        },
-        {
-            path: 'register',
-            element: <Register></Register>
-        },
-    ]
-
-  }
+    }
 ]);

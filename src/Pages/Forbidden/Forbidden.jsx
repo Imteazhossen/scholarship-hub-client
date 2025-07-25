@@ -10,7 +10,7 @@ export default function Forbidden() {
       <h1 className="text-6xl font-extrabold text-gray-800 mb-4">403</h1>
       <h2 className="text-2xl font-semibold text-gray-700 mb-2">Forbidden</h2>
       <p className="text-center text-gray-600 max-w-md mb-6">
-        Oops! You don’t have permission to view this page.<br/>
+        Oops! You don't have permission to view this page.<br/>
         Please contact the administrator if you believe this is an error.
       </p>
       <Link to="/">

@@ -47,7 +47,7 @@ export default function DashboardLayout() {
 
                     {/* Logo */}
                     <div className='flex'>
-                        <FaGoogleScholar size={28} className="text-sky-600" />
+                        <FaGoogleScholar size={28} className="text-sky-600 mr-5" />
                         <span className="text-xl font-extrabold text-gray-800">
                             Scholarship Hub
                         </span>
@@ -73,10 +73,12 @@ export default function DashboardLayout() {
                 <label htmlFor="dashboard-drawer" className="drawer-overlay" />
 
                 <aside className="w-60 bg-white shadow-lg flex flex-col">
-                    <div className="p-6 border-b">
-                      <FaGoogleScholar size={28} className="text-sky-600" />
+                    <div className="p-4 flex justify-center items-center space-x-2 border-b-2 border-sky-500">
+                        <FaGoogleScholar size={28} className="text-sky-600" />
+                        <span className='font-bold'>Explore Here!</span>
+                      
                     </div>
-
+                    
                     <nav className="flex-1 overflow-y-auto">
                         <ul className="menu p-4 space-y-2">
                             {/* Always visible */}
@@ -108,7 +110,7 @@ export default function DashboardLayout() {
                             )}
 
                             {/* Moderator Links */}
-                            {!roleLoading && role === 'moderator' && (
+                            {!roleLoading && role === 'user' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/mod/scholarships" className={linkClasses}>
@@ -116,7 +118,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/mod/scholarships/add" className={linkClasses}>
+                                        <NavLink to="/dashboard/addScholarships" className={linkClasses}>
                                             <FaPlusCircle className="mr-3 text-sky-600" /> Add Scholarship
                                         </NavLink>
                                     </li>
@@ -134,7 +136,7 @@ export default function DashboardLayout() {
                             )}
 
                             {/* Admin Links */}
-                            {!roleLoading && role === 'admin' && (
+                            {!roleLoading && role === 'user' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/admin/users" className={linkClasses}>
