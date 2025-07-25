@@ -25,9 +25,9 @@ const DashboardHome = () => {
     else if (role === 'moderator') {
        return <ModeratorDashboard></ModeratorDashboard>
     }
-    // // else {
-    //    return <Forbidden></Forbidden>
-    // }
+    else {
+       return <Forbidden></Forbidden>
+    }
 };
 
 export default DashboardHome;
