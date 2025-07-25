@@ -50,7 +50,7 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink
-                    to="/allScholarship"
+                    to="/allScholarships"
                     className={({ isActive }) =>
                         isActive
                             ? 'border-b-4 border-sky-500 text-sky-600 font-bold'
