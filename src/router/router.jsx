@@ -13,6 +13,7 @@ import Payment from "../Pages/Payment/Payment";
 import Applications from "../Pages/Dashboard/DashboardHome/User/Applications";
 import PrivateRoute from "../Routes/PrivetRoute";
 import MyProfile from "../Pages/SharedComponents/MyProfile/MyProfile";
+import MyReviews from "../Pages/Dashboard/DashboardHome/User/MyReviews";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: 'myProfile',
                 element: <MyProfile></MyProfile>
+            },
+            {
+                path: 'myReviews',
+                element: <MyReviews></MyReviews>
             }
         ]
     },
