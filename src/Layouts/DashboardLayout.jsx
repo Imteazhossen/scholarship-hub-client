@@ -84,7 +84,7 @@ export default function DashboardLayout() {
                             {/* Always visible */}
                             <li>
                                 <NavLink to="/" className={linkClasses}>
-                                    <FaHome className="mr-3 text-sky-600" /> Home
+                                    <FaHome className="mr-3 text-sky-600" size={20} /> Home
                                 </NavLink>
                             </li>
 
