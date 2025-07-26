@@ -127,7 +127,7 @@ export default function Payment() {
     const [photoURL, setPhotoURL] = useState('');
     const [uploading, setUploading] = useState(false);
 
-    console.log(user.email);
+    // console.log(user.email);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -170,7 +170,7 @@ export default function Payment() {
             setUploading(false);
         }
     };
-console.log(scholarship); //fees r service charge dekhate hobe
+    console.log(scholarship); //fees r service charge dekhate hobe
     // Stage 1: save all applicant info + pending status
     const onSubmit = async data => {
         if (!photoURL) {
@@ -190,6 +190,8 @@ console.log(scholarship); //fees r service charge dekhate hobe
             universityName: scholarship.universityName,
             scholarshipCategory: scholarship.scholarshipCategory,
             subjectCategory: scholarship.subjectCategory,
+            serviceCharge: scholarship.serviceCharge,
+            applicationFees: scholarship.applicationFees,
             userEmail: user.email,
             userName: user.displayName,
             payment_status: 'pending',
