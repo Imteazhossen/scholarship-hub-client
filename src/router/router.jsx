@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router";
+import { createBrowserRouter } from "react-router";
 import RootLayout from "../Layouts/RootLayout";
 import Home from "../Pages/Home/Home";
 import AuthLayout from "../Layouts/AuthLayout";
@@ -16,6 +16,7 @@ import MyProfile from "../Pages/SharedComponents/MyProfile/MyProfile";
 import MyReviews from "../Pages/Dashboard/DashboardHome/User/MyReviews";
 import Forbidden from "../Pages/Forbidden/Forbidden";
 import ManageScholarships from "../Pages/Dashboard/DashboardHome/Moderator/ManageScholarships";
+import AllReviews from "../Pages/Dashboard/DashboardHome/Moderator/AllReviews";
 
 export const router = createBrowserRouter([
     {
@@ -31,8 +32,8 @@ export const router = createBrowserRouter([
                 element: <AllScholarship></AllScholarship>
             },
             {
-                 path: 'scholarships/:id',
-                 element: <PrivateRoute><ScholarshipDetails></ScholarshipDetails></PrivateRoute> 
+                path: 'scholarships/:id',
+                element: <PrivateRoute><ScholarshipDetails></ScholarshipDetails></PrivateRoute>
             },
             {
                 path: 'payment/:id',
@@ -71,6 +72,10 @@ export const router = createBrowserRouter([
             {
                 path: 'manageScholarships',
                 element: <ManageScholarships></ManageScholarships>
+            },
+            {
+                path: 'allReviews',
+                element: <AllReviews></AllReviews>
             }
         ]
     },

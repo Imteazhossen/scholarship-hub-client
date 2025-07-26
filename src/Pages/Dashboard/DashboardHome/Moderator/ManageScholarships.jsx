@@ -61,7 +61,7 @@ export default function ManageScholarship() {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              {['Name','University','Subject','Degree','App Fee','Actions'].map(h=>(
+              {['Name','University','Subject','Degree','Application Fee','Actions (Details, Edit, Delete)'].map(h=>(
                 <th key={h} className="px-4 py-2 text-left text-sm font-medium text-gray-700">
                   {h}
                 </th>
@@ -76,7 +76,7 @@ export default function ManageScholarship() {
                 <td className="px-4 py-4">{s.subjectCategory}</td>
                 <td className="px-4 py-4">{s.degree}</td>
                 <td className="px-4 py-4">${s.applicationFees}</td>
-                <td className="flex justify-evenly items-center px-4 py-4 space-x-3">
+                <td className="flex justify-evenly items-center px-2 py-6 space-x-3">
                   <NavLink to={`/scholarships/${s._id}`} title="Details" className="text-sky-600 hover:text-sky-800">
                     <FaInfoCircle/>
                   </NavLink>

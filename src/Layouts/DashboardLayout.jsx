@@ -133,7 +133,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/mod/reviews" className={linkClasses}>
+                                        <NavLink to="/dashboard/allReviews" className={linkClasses}>
                                             <FaCommentDots className="mr-3 text-sky-600" /> All Reviews
                                         </NavLink>
                                     </li>
