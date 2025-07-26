@@ -15,6 +15,7 @@ import PrivateRoute from "../Routes/PrivetRoute";
 import MyProfile from "../Pages/SharedComponents/MyProfile/MyProfile";
 import MyReviews from "../Pages/Dashboard/DashboardHome/User/MyReviews";
 import Forbidden from "../Pages/Forbidden/Forbidden";
+import ManageScholarships from "../Pages/Dashboard/DashboardHome/Moderator/ManageScholarships";
 
 export const router = createBrowserRouter([
     {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
             {
                 path: 'myReviews',
                 element: <MyReviews></MyReviews>
+            },
+            {
+                path: 'manageScholarships',
+                element: <ManageScholarships></ManageScholarships>
             }
         ]
     },

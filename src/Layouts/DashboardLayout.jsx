@@ -89,7 +89,7 @@ export default function DashboardLayout() {
                             </li>
 
                             {/* User Links */}
-                            {!roleLoading && role === 'user' && (
+                            {!roleLoading && role === 'userrrrrrr' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
@@ -110,7 +110,7 @@ export default function DashboardLayout() {
                             )}
 
                             {/* Moderator Links */}
-                            {!roleLoading && role === 'user' && (
+                            {!roleLoading && role === 'moderator' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
@@ -118,7 +118,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/mod/scholarships" className={linkClasses}>
+                                        <NavLink to="/dashboard/manageScholarships" className={linkClasses}>
                                             <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
                                         </NavLink>
                                     </li>
