@@ -1,6 +1,4 @@
-import {
-    createBrowserRouter,
-} from "react-router";
+import {createBrowserRouter} from "react-router";
 import RootLayout from "../Layouts/RootLayout";
 import Home from "../Pages/Home/Home";
 import AuthLayout from "../Layouts/AuthLayout";
@@ -13,6 +11,8 @@ import AllScholarship from "../Pages/AllScholarships/AllScholarships";
 import ScholarshipDetails from "../Pages/ScholarshipDetails/ScholarshipDetails";
 import Payment from "../Pages/Payment/Payment";
 import Applications from "../Pages/Dashboard/DashboardHome/User/Applications";
+import PrivateRoute from "../Routes/PrivetRoute";
+import MyProfile from "../Pages/SharedComponents/MyProfile/MyProfile";
 
 export const router = createBrowserRouter([
     {
@@ -29,17 +29,17 @@ export const router = createBrowserRouter([
             },
             {
                  path: 'scholarships/:id',
-                 element: <ScholarshipDetails></ScholarshipDetails>
+                 element: <PrivateRoute><ScholarshipDetails></ScholarshipDetails></PrivateRoute> 
             },
             {
                 path: 'payment/:id',
-                element: <Payment></Payment>
+                element: <PrivateRoute> <Payment></Payment></PrivateRoute>
             }
         ]
     },
     {
         path: '/dashboard',
-        element: <DashboardLayout></DashboardLayout>,
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
                 index: true,
@@ -52,6 +52,10 @@ export const router = createBrowserRouter([
             {
                 path: 'applications',
                 element: <Applications></Applications>
+            },
+            {
+                path: 'myProfile',
+                element: <MyProfile></MyProfile>
             }
         ]
     },

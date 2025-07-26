@@ -76,9 +76,9 @@ export default function DashboardLayout() {
                     <div className="p-4 flex justify-center items-center space-x-2 border-b-2 border-sky-500">
                         <FaGoogleScholar size={28} className="text-sky-600" />
                         <span className='font-bold'>Explore Here!</span>
-                      
+
                     </div>
-                    
+
                     <nav className="flex-1 overflow-y-auto">
                         <ul className="menu p-4 space-y-2">
                             {/* Always visible */}
@@ -92,7 +92,7 @@ export default function DashboardLayout() {
                             {!roleLoading && role === 'user' && (
                                 <>
                                     <li>
-                                        <NavLink to="/dashboard/user/profile" className={linkClasses}>
+                                        <NavLink to="/dashboard/myProfile" className={linkClasses}>
                                             <FaUser className="mr-3 text-sky-600" /> My Profile
                                         </NavLink>
                                     </li>
@@ -112,6 +112,11 @@ export default function DashboardLayout() {
                             {/* Moderator Links */}
                             {!roleLoading && role === 'user' && (
                                 <>
+                                    <li>
+                                        <NavLink to="/dashboard/myProfile" className={linkClasses}>
+                                            <FaUser className="mr-3 text-sky-600" /> My Profile
+                                        </NavLink>
+                                    </li>
                                     <li>
                                         <NavLink to="/dashboard/mod/scholarships" className={linkClasses}>
                                             <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
@@ -138,6 +143,11 @@ export default function DashboardLayout() {
                             {/* Admin Links */}
                             {!roleLoading && role === 'user' && (
                                 <>
+                                    <li>
+                                        <NavLink to="/dashboard/myProfile" className={linkClasses}>
+                                            <FaUser className="mr-3 text-sky-600" /> My Profile
+                                        </NavLink>
+                                    </li>
                                     <li>
                                         <NavLink to="/dashboard/admin/users" className={linkClasses}>
                                             <FaUsers className="mr-3 text-sky-600" /> Manage Users
