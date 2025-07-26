@@ -14,6 +14,7 @@ import Applications from "../Pages/Dashboard/DashboardHome/User/Applications";
 import PrivateRoute from "../Routes/PrivetRoute";
 import MyProfile from "../Pages/SharedComponents/MyProfile/MyProfile";
 import MyReviews from "../Pages/Dashboard/DashboardHome/User/MyReviews";
+import Forbidden from "../Pages/Forbidden/Forbidden";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 Component: DashboardHome
+            },
+            {
+                path: 'forbidden',
+                element: <Forbidden></Forbidden>
             },
             {
                 path: "addScholarships",
