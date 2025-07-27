@@ -72,7 +72,7 @@ export default function AdminDashboard() {
   const totalReviews      = reviews.length +1;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-8 px-4">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center text-gray-800">
