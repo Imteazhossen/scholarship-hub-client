@@ -20,6 +20,8 @@ import AllReviews from "../Pages/Dashboard/DashboardHome/Moderator/AllReviews";
 import AllAppliedScholarship from "../Pages/Dashboard/DashboardHome/Moderator/AllAppliedScholarship";
 import AddScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/AddScholarshipAdmin";
 import ManageUsers from "../Pages/Dashboard/DashboardHome/Admin/ManageUsers";
+import ManageReview from "../Pages/Dashboard/DashboardHome/Admin/ManageReview";
+import ManageScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/ManageScholarshipAdmin";
 
 export const router = createBrowserRouter([
     {
@@ -91,6 +93,14 @@ export const router = createBrowserRouter([
             {
                 path: 'manageUsers',
                 element: <ManageUsers></ManageUsers>
+            },
+            {
+                path: 'manageReviews',
+                element: <ManageReview></ManageReview>
+            },
+            {
+                path: 'manageScholarshipsAdmin',
+                element: <ManageScholarshipAdmin></ManageScholarshipAdmin>
             }
         ]
     },

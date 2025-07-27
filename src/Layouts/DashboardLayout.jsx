@@ -164,7 +164,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/admin/reviews" className={linkClasses}>
+                                        <NavLink to="/dashboard/manageReviews" className={linkClasses}>
                                             <FaCommentDots className="mr-3 text-sky-600" /> Manage Reviews
                                         </NavLink>
                                     </li>
