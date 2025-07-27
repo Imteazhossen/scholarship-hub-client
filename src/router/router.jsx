@@ -17,6 +17,7 @@ import MyReviews from "../Pages/Dashboard/DashboardHome/User/MyReviews";
 import Forbidden from "../Pages/Forbidden/Forbidden";
 import ManageScholarships from "../Pages/Dashboard/DashboardHome/Moderator/ManageScholarships";
 import AllReviews from "../Pages/Dashboard/DashboardHome/Moderator/AllReviews";
+import AllAppliedScholarship from "../Pages/Dashboard/DashboardHome/Moderator/AllAppliedScholarship";
 
 export const router = createBrowserRouter([
     {
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
             {
                 path: 'allReviews',
                 element: <AllReviews></AllReviews>
+            },
+            {
+                path: 'allAppliedScholarship',
+                element: <AllAppliedScholarship></AllAppliedScholarship>
             }
         ]
     },

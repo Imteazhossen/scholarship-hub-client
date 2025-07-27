@@ -89,7 +89,7 @@ export default function DashboardLayout() {
                             </li>
 
                             {/* User Links */}
-                            {!roleLoading && role === 'userrrrrrr' && (
+                            {!roleLoading && role === 'user' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
@@ -128,7 +128,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/mod/applications" className={linkClasses}>
+                                        <NavLink to="/dashboard/allAppliedScholarship" className={linkClasses}>
                                             <FaClipboardList className="mr-3 text-sky-600" /> All Applications
                                         </NavLink>
                                     </li>
