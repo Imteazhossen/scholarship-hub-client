@@ -174,7 +174,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/admin/analytics" className={linkClasses}>
+                                        <NavLink to="/dashboard/analytics" className={linkClasses}>
                                             <FaChartLine className="mr-3 text-sky-600" /> Analytics
                                         </NavLink>
                                     </li>

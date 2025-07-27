@@ -23,6 +23,7 @@ import ManageUsers from "../Pages/Dashboard/DashboardHome/Admin/ManageUsers";
 import ManageReview from "../Pages/Dashboard/DashboardHome/Admin/ManageReview";
 import ManageScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/ManageScholarshipAdmin";
 import ManageAppliedApplication from "../Pages/Dashboard/DashboardHome/Admin/ManageAppliedApplication";
+import Analytics from "../Pages/Dashboard/DashboardHome/Admin/Analytics";
 
 export const router = createBrowserRouter([
     {
@@ -106,6 +107,10 @@ export const router = createBrowserRouter([
             {
                 path: 'manageAppliedApplication',
                 element: <ManageAppliedApplication></ManageAppliedApplication>
+            },
+            {
+                path: 'analytics',
+                element: <Analytics></Analytics>
             }
         ]
     },

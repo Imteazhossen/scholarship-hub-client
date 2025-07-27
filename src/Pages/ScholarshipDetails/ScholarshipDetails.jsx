@@ -55,7 +55,7 @@ export default function ScholarshipDetails() {
         postDate,
         serviceCharge,
         applicationFees,
-        subjectCategory
+        subjectCategory,
     } = scholarship;
 
     const rating = scholarship.rating ?? 0;

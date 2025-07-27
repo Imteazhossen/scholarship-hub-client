@@ -196,6 +196,7 @@ export default function Payment() {
             userName: user.displayName,
             payment_status: 'pending',
             application_status: 'pending',
+            applicationDeadline: scholarship.applicationDeadline,
             createdAt: new Date().toISOString()
         };
         try {
@@ -209,7 +210,7 @@ export default function Payment() {
     };
 
     return (
-        <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+        <section className="py-16 mb-10 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
             <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg space-y-8">
                 <h2 className="text-2xl font-bold text-center text-sky-600">
                     Application & Payment
@@ -279,7 +280,7 @@ export default function Payment() {
                                     className="w-full border-2 border-sky-300 rounded-lg p-2 focus:border-emerald-400"
                                 >
                                     <option value="">Select</option>
-                                    <option>Diploma</option>
+                                    <option>Doctor</option>
                                     <option>Bachelor</option>
                                     <option>Masters</option>
                                 </select>

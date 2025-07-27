@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/Pages/Dashboard/DashboardHome/Admin/ManageAppliedApplication.jsx
+import React, { useState, useMemo } from 'react';
 import {
   useQuery,
   useMutation,
@@ -20,8 +21,9 @@ export default function ManageAppliedApplication() {
   const api = useAxiosSecure();
   const qc  = useQueryClient();
 
-  const [viewing, setViewing]     = useState(null);
+  const [viewing, setViewing]         = useState(null);
   const [feedbacking, setFeedbacking] = useState(null);
+  const [sortKey, setSortKey]         = useState(''); 
 
   // 1) Fetch all applications
   const {
@@ -33,20 +35,49 @@ export default function ManageAppliedApplication() {
     queryFn: () => api.get('/applications').then(r => r.data)
   });
 
-  // 2) Mutations
-  // patch status + feedback
+  // 2) PATCH mutation (status, feedback)
   const patchApp = useMutation({
     mutationFn: ({ id, updates }) =>
       api.patch(`/applications/${id}`, updates),
     onSuccess: () => {
       qc.invalidateQueries(['allApplications']);
-      Swal.fire({ icon: 'success', toast: true, position: 'top-end',
-        timer: 1500, showConfirmButton: false });
+      Swal.fire({
+        icon: 'success',
+        toast: true,
+        position: 'top-end',
+        timer: 1500,
+        showConfirmButton: false
+      });
     },
     onError: () => {
       Swal.fire('Error', 'Could not update.', 'error');
     }
   });
+
+  // 3) Sort according to sortKey
+  const sortedApps = useMemo(() => {
+    const arr = [...apps];
+    switch (sortKey) {
+      case 'applied-newest':
+        return arr.sort((a, b) =>
+          new Date(b.createdAt) - new Date(a.createdAt)
+        );
+      case 'applied-oldest':
+        return arr.sort((a, b) =>
+          new Date(a.createdAt) - new Date(b.createdAt)
+        );
+      case 'deadline-soonest':
+        return arr.sort((a, b) =>
+          new Date(a.applicationDeadline) - new Date(b.applicationDeadline)
+        );
+      case 'deadline-furthest':
+        return arr.sort((a, b) =>
+          new Date(b.applicationDeadline) - new Date(a.applicationDeadline)
+        );
+      default:
+        return arr;
+    }
+  }, [apps, sortKey]);
 
   if (isLoading) return <Loading></Loading>;
   if (isError)
@@ -57,21 +88,38 @@ export default function ManageAppliedApplication() {
     );
 
   return (
-    <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+    <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+      <div className="max-w-6xl mx-auto px-4 space-y-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800">
           Manage All Applications
         </h2>
 
+        {/* --- Sort Dropdown --- */}
+        <div className="flex justify-center">
+          <select
+            value={sortKey}
+            onChange={e => setSortKey(e.target.value)}
+            className="select select-bordered w-64"
+          >
+            <option value="">-- Sort / Filter --</option>
+            <option value="applied-newest">Applied Date (Newest)</option>
+            <option value="applied-oldest">Applied Date (Oldest)</option>
+            <option value="deadline-soonest">Deadline (Soonest)</option>
+            <option value="deadline-furthest">Deadline (Furthest)</option>
+          </select>
+        </div>
+
+        {/* --- Table --- */}
         <div className="overflow-auto bg-white rounded-lg shadow">
-          <table className="min-w-full  shadow-xl divide-y divide-sky-400">
+          <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 {[
                   'University',
-                  'Applied By',
                   'Degree',
                   'Category',
+                  'Applied On',
+                  'Deadline',
                   'Status',
                   'Actions'
                 ].map(h => (
@@ -84,13 +132,20 @@ export default function ManageAppliedApplication() {
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-emerald-400">
-              {apps.map(a => (
+            <tbody className="divide-y divide-gray-100">
+              {sortedApps.map(a => (
                 <tr key={a._id}>
                   <td className="px-4 py-2 text-sm">{a.universityName}</td>
-                  <td className="px-4 py-2 text-sm">{a.userName}</td>
                   <td className="px-4 py-2 text-sm">{a.applyingDegree}</td>
-                  <td className="px-4 py-2 text-sm">{a.scholarshipCategory}</td>
+                  <td className="px-4 py-2 text-sm">
+                    {a.scholarshipCategory}
+                  </td>
+                  <td className="px-4 py-2 text-sm">
+                    {new Date(a.createdAt).toLocaleDateString()}
+                  </td>
+                  <td className="px-4 py-2 text-sm">
+                    {new Date(a.applicationDeadline).toLocaleDateString()}
+                  </td>
                   <td className="px-4 py-2 text-sm capitalize">
                     {a.application_status}
                   </td>
@@ -116,11 +171,9 @@ export default function ManageAppliedApplication() {
                     {/* Cancel */}
                     <button
                       onClick={() =>
-                        patchApp.mutate({ 
+                        patchApp.mutate({
                           id: a._id,
-                          updates: { 
-                            application_status: 'Rejected' 
-                          }
+                          updates: { application_status: 'Rejected' }
                         })
                       }
                       className="text-red-600 hover:text-red-800"
@@ -132,11 +185,9 @@ export default function ManageAppliedApplication() {
                     {/* Accept */}
                     <button
                       onClick={() =>
-                        patchApp.mutate({ 
+                        patchApp.mutate({
                           id: a._id,
-                          updates: { 
-                            application_status: 'Completed' 
-                          }
+                          updates: { application_status: 'Completed' }
                         })
                       }
                       className="text-green-600 hover:text-green-800"
@@ -151,18 +202,20 @@ export default function ManageAppliedApplication() {
           </table>
         </div>
 
-        {/* Details Modal */}
+        {/* --- Details Modal --- */}
         {viewing && (
           <Modal onClose={() => setViewing(null)}>
             <h3 className="text-xl font-semibold mb-4">Application Details</h3>
             <p><strong>University:</strong> {viewing.universityName}</p>
             <p><strong>Degree:</strong> {viewing.applyingDegree}</p>
             <p><strong>Category:</strong> {viewing.scholarshipCategory}</p>
+            <p><strong>Applied On:</strong> {new Date(viewing.createdAt).toLocaleDateString()}</p>
+            <p><strong>Deadline:</strong> {new Date(viewing.applicationDeadline).toLocaleDateString()}</p>
             <p><strong>Status:</strong> {viewing.application_status}</p>
           </Modal>
         )}
 
-        {/* Feedback Modal */}
+        {/* --- Feedback Modal --- */}
         {feedbacking && (
           <Modal onClose={() => setFeedbacking(null)}>
             <FeedbackForm
@@ -186,7 +239,7 @@ export default function ManageAppliedApplication() {
 }
 
 // ———————————————————————————
-// Generic Modal
+// Generic Modal Wrapper
 function Modal({ children, onClose }) {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
@@ -204,7 +257,7 @@ function Modal({ children, onClose }) {
 }
 
 // ———————————————————————————
-// Feedback Form
+// Feedback Form inside modal
 function FeedbackForm({ app, onSave }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
