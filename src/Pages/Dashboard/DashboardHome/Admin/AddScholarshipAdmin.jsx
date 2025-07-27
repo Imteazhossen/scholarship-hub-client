@@ -1,4 +1,3 @@
-// src/Pages/Dashboard/DashboardHome/Admin/AddScholarshipAdmin.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast }    from 'react-toastify';

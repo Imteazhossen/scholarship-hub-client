@@ -19,6 +19,7 @@ import ManageScholarships from "../Pages/Dashboard/DashboardHome/Moderator/Manag
 import AllReviews from "../Pages/Dashboard/DashboardHome/Moderator/AllReviews";
 import AllAppliedScholarship from "../Pages/Dashboard/DashboardHome/Moderator/AllAppliedScholarship";
 import AddScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/AddScholarshipAdmin";
+import ManageUsers from "../Pages/Dashboard/DashboardHome/Admin/ManageUsers";
 
 export const router = createBrowserRouter([
     {
@@ -86,6 +87,10 @@ export const router = createBrowserRouter([
             {
                 path: 'addScholarshipAdmin',
                 element: <AddScholarshipAdmin></AddScholarshipAdmin>
+            },
+            {
+                path: 'manageUsers',
+                element: <ManageUsers></ManageUsers>
             }
         ]
     },

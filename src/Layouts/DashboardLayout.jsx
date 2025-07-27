@@ -149,7 +149,7 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/admin/users" className={linkClasses}>
+                                        <NavLink to="/dashboard/manageUsers" className={linkClasses}>
                                             <FaUsers className="mr-3 text-sky-600" /> Manage Users
                                         </NavLink>
                                     </li>
