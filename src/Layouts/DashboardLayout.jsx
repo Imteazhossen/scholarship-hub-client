@@ -159,8 +159,13 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/admin/applications" className={linkClasses}>
+                                        <NavLink to="/dashboard/manageAppliedApplication" className={linkClasses}>
                                             <FaClipboardList className="mr-3 text-sky-600" /> Manage Applied Applications
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/manageScholarshipsAdmin" className={linkClasses}>
+                                            <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
                                         </NavLink>
                                     </li>
                                     <li>
