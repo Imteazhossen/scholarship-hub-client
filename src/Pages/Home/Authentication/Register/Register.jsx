@@ -26,6 +26,7 @@ export default function Register() {
 
             // 2) Create user in Firebase Auth
             const result = await createUser(data.email, data.password);
+             navigate(returnTo);
 
             // 3) Update Firebase profile
             await updateUserProfile({
@@ -47,7 +48,7 @@ export default function Register() {
             await api.post('/users', userRecord);
 
             toast.success('Registered successfully!');
-            navigate(returnTo);
+           
 
         } catch (err) {
             console.error(err);

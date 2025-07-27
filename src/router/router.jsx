@@ -18,6 +18,7 @@ import Forbidden from "../Pages/Forbidden/Forbidden";
 import ManageScholarships from "../Pages/Dashboard/DashboardHome/Moderator/ManageScholarships";
 import AllReviews from "../Pages/Dashboard/DashboardHome/Moderator/AllReviews";
 import AllAppliedScholarship from "../Pages/Dashboard/DashboardHome/Moderator/AllAppliedScholarship";
+import AddScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/AddScholarshipAdmin";
 
 export const router = createBrowserRouter([
     {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
             {
                 path: 'allAppliedScholarship',
                 element: <AllAppliedScholarship></AllAppliedScholarship>
+            },
+            {
+                path: 'addScholarshipAdmin',
+                element: <AddScholarshipAdmin></AddScholarshipAdmin>
             }
         ]
     },

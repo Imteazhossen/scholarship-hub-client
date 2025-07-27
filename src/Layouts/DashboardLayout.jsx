@@ -141,11 +141,11 @@ export default function DashboardLayout() {
                             )}
 
                             {/* Admin Links */}
-                            {!roleLoading && role === 'user' && (
+                            {!roleLoading && role === 'admin' && (
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
-                                            <FaUser className="mr-3 text-sky-600" /> My Profile
+                                            <FaUser className="mr-3 text-sky-600" /> Admin Profile
                                         </NavLink>
                                     </li>
                                     <li>
@@ -154,13 +154,13 @@ export default function DashboardLayout() {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/admin/scholarships" className={linkClasses}>
-                                            <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
+                                        <NavLink to="/dashboard/addScholarshipAdmin" className={linkClasses}>
+                                            <FaUniversity className="mr-3 text-sky-600" /> Add Scholarships
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/admin/applications" className={linkClasses}>
-                                            <FaClipboardList className="mr-3 text-sky-600" /> Manage Applications
+                                            <FaClipboardList className="mr-3 text-sky-600" /> Manage Applied Applications
                                         </NavLink>
                                     </li>
                                     <li>
