@@ -1,6 +1,6 @@
 // src/Pages/SharedComponents/ErrorPage.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { FaExclamationTriangle } from 'react-icons/fa';
 
 export default function ErrorPage({ status = 404, message = "Page not found." }) {

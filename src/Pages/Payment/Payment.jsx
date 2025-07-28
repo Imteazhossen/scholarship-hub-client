@@ -1,23 +1,24 @@
 import React, { useState, useEffect, use } from 'react';
 import { useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
-// import { loadStripe }                     from '@stripe/stripe-js';
-// import {
-//   Elements,
-//   CardElement,
-//   useStripe,
-//   useElements
-// } from '@stripe/react-stripe-js';
+import { loadStripe }                     from '@stripe/stripe-js';
+import {
+  Elements,
+  CardElement,
+  useStripe,
+  useElements
+} from '@stripe/react-stripe-js';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import useAuth from '../../Hooks/useAuth';
 import Loading from '../SharedComponents/Loading/Loading';
+import PaymentForm from './PaymentForm';
 
 
 
-// const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_KEY);
 
 function CheckoutForm({ clientSecret, applicationId }) {
     const stripe = useStripe();
@@ -216,7 +217,7 @@ export default function Payment() {
                     Application & Payment
                 </h2>
 
-                {/* Stage 1: Application Form */}
+                {/* Stage One: Application Form */}
                 {!formSubmitted ? (
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                         {/* Phone */}
@@ -336,7 +337,7 @@ export default function Payment() {
                         </button>
                     </form>
                 ) : (
-                    // Stage 2: show Stripe payment form
+                    // Stage 2: show Stripe payment form
                     clientSecret && (
                         <div className="mt-8 p-6 bg-white rounded-2xl shadow-inner animate-fade-in">
                             <Elements stripe={stripePromise} options={{ clientSecret }}>
