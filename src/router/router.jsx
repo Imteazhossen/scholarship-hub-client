@@ -26,11 +26,15 @@ import ManageAppliedApplication from "../Pages/Dashboard/DashboardHome/Admin/Man
 import Analytics from "../Pages/Dashboard/DashboardHome/Admin/Analytics";
 import ModeratorRoute from "../Routes/ModeratorRoute";
 import AdminRoute from "../Routes/AdminRoute";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Loading from "../Pages/SharedComponents/Loading/Loading";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         Component: RootLayout,
+        errorElement: <ErrorPage></ErrorPage>,
+        hydrateFallbackElement: <Loading></Loading>,
         children: [
             {
                 index: true,
