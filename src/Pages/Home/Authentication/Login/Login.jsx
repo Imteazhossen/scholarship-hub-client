@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { FaGoogle, FaFacebookF } from 'react-icons/fa';
@@ -19,6 +19,7 @@ export default function Login() {
     const location = useLocation();
     const navigate = useNavigate();
     const form = location.state?.form || '/';
+    const {error, setError} = useState('');
 
     const onSubmit = (data) => {
         signIn(data.email, data.password)
@@ -28,6 +29,7 @@ export default function Login() {
         })
         .catch(error => {
             console.log(error);
+            setError(error);
         })
     }
 

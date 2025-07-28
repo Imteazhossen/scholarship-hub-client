@@ -1,4 +1,4 @@
-import React, { useState, useEffect, use } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { useForm } from 'react-hook-form';
 import { loadStripe }                     from '@stripe/stripe-js';
@@ -138,6 +138,9 @@ export default function Payment() {
             .then(r => setScholarship(r.data))
             .catch(() => toast.error('Failed to load scholarship'));
     }, [scholarshipId]);
+
+
+    
 
     // 2) after saving application info, init Stripe PaymentIntent
     useEffect(() => {

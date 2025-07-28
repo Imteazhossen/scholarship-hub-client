@@ -69,7 +69,7 @@ export default function ModeratorDashboard() {
   const totalRev    = reviews.length;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Moderator Info */}
         <div className="flex items-center space-x-4 bg-white p-6 rounded-2xl shadow">
