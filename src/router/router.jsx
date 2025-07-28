@@ -24,6 +24,8 @@ import ManageReview from "../Pages/Dashboard/DashboardHome/Admin/ManageReview";
 import ManageScholarshipAdmin from "../Pages/Dashboard/DashboardHome/Admin/ManageScholarshipAdmin";
 import ManageAppliedApplication from "../Pages/Dashboard/DashboardHome/Admin/ManageAppliedApplication";
 import Analytics from "../Pages/Dashboard/DashboardHome/Admin/Analytics";
+import ModeratorRoute from "../Routes/ModeratorRoute";
+import AdminRoute from "../Routes/AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -60,10 +62,7 @@ export const router = createBrowserRouter([
                 path: 'forbidden',
                 element: <Forbidden></Forbidden>
             },
-            {
-                path: "addScholarships",
-                element: <AddScholarship></AddScholarship>
-            },
+            //user
             {
                 path: 'applications',
                 element: <Applications></Applications>
@@ -76,41 +75,47 @@ export const router = createBrowserRouter([
                 path: 'myReviews',
                 element: <MyReviews></MyReviews>
             },
+            //Moderator 
+            {
+                path: "addScholarships",
+                element:  <ModeratorRoute><AddScholarship></AddScholarship></ModeratorRoute>
+            },
             {
                 path: 'manageScholarships',
-                element: <ManageScholarships></ManageScholarships>
+                element: <ModeratorRoute><ManageScholarships></ManageScholarships></ModeratorRoute>
             },
             {
                 path: 'allReviews',
-                element: <AllReviews></AllReviews>
+                element: <ModeratorRoute><AllReviews></AllReviews></ModeratorRoute>
             },
             {
                 path: 'allAppliedScholarship',
-                element: <AllAppliedScholarship></AllAppliedScholarship>
+                element: <ModeratorRoute><AllAppliedScholarship></AllAppliedScholarship></ModeratorRoute>
             },
+            //Admin
             {
                 path: 'addScholarshipAdmin',
-                element: <AddScholarshipAdmin></AddScholarshipAdmin>
+                element: <AdminRoute><AddScholarshipAdmin></AddScholarshipAdmin></AdminRoute>
             },
             {
                 path: 'manageUsers',
-                element: <ManageUsers></ManageUsers>
+                element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
             },
             {
                 path: 'manageReviews',
-                element: <ManageReview></ManageReview>
+                element: <AdminRoute><ManageReview></ManageReview></AdminRoute>
             },
             {
                 path: 'manageScholarshipsAdmin',
-                element: <ManageScholarshipAdmin></ManageScholarshipAdmin>
+                element: <AdminRoute><ManageScholarshipAdmin></ManageScholarshipAdmin></AdminRoute>
             },
             {
                 path: 'manageAppliedApplication',
-                element: <ManageAppliedApplication></ManageAppliedApplication>
+                element: <AdminRoute><ManageAppliedApplication></ManageAppliedApplication></AdminRoute>
             },
             {
                 path: 'analytics',
-                element: <Analytics></Analytics>
+                element: <AdminRoute><Analytics></Analytics></AdminRoute>
             }
         ]
     },
