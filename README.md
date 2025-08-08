@@ -1,4 +1,4 @@
-# 🎓 Scholarship Management System - Assignment12_category_016
+# 🎓 ScholarshipHub
 
 ![License](https://img.shields.io/badge/license-MIT-green)  
 ![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)  
