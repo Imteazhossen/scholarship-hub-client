@@ -62,21 +62,50 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink
-                    to="/dashboard"
+                    to="/aboutUs"
                     className={({ isActive }) =>
                         isActive
                             ? 'border-b-4 border-sky-500 text-sky-600 font-bold'
                             : 'text-gray-600 hover:text-sky-500 font-bold'
                     }
                 >
-                    Dashboard
+                    About Us
                 </NavLink>
             </li>
+            {user &&
+                <li>
+                    <NavLink
+                        to="/media"
+                        className={({ isActive }) =>
+                            isActive
+                                ? 'border-b-4 border-sky-500 text-sky-600 font-bold'
+                                : 'text-gray-600 hover:text-sky-500 font-bold'
+                        }
+                    >
+                        Media
+                    </NavLink>
+                </li>
+            }
+            {user &&
+                <li>
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive }) =>
+                            isActive
+                                ? 'border-b-4 border-sky-500 text-sky-600 font-bold'
+                                : 'text-gray-600 hover:text-sky-500 font-bold'
+                        }
+                    >
+                        Dashboard
+                    </NavLink>
+                </li>
+            }
+
         </>
     );
 
     return (
-        <div className="navbar bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 px-4 md:px-8 py-3 shadow-md">
+        <div className="navbar bg-gradient-to-r sticky top-0 z-50 rounded-b-xl from-pink-50 via-sky-100 to-emerald-50 px-4 md:px-8 py-3 shadow-md">
             {/* Start: logo and mobile menu */}
             <div className="navbar-start">
                 <div className="dropdown -ml-4 sm:-ml-0 lg:hidden">
@@ -105,7 +134,7 @@ const Navbar = () => {
                 </div>
                 <Link to="/" className="flex items-center space-x-2">
                     <FaGoogleScholar size={28} className="text-sky-600" />
-                    <span className="text-xl font-extrabold text-gray-800">
+                    <span className="text-sm sm:text-xl font-extrabold text-gray-800">
                         Scholarship Hub
                     </span>
                 </Link>
@@ -136,7 +165,7 @@ const Navbar = () => {
                         </span>
                         <button
                             onClick={handleLogOut}
-                            className="btn btn-outline border-sky-500 text-sky-500 hover:bg-sky-100 rounded-full px-4 py-2 transform hover:scale-105 transition"
+                            className="btn btn-outline btn-sm sm:btn-md border-sky-500 text-sky-500 hover:bg-sky-100 rounded-full px-2 sm:px-4 py-1 sm:py-2 transform hover:scale-105 transition"
                         >
                             Logout
                         </button>

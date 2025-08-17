@@ -28,6 +28,8 @@ import ModeratorRoute from "../Routes/ModeratorRoute";
 import AdminRoute from "../Routes/AdminRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Loading from "../Pages/SharedComponents/Loading/Loading";
+import AboutUs from "../Pages/About Us/AboutUs";
+import Media from "../Pages/About Us/Media/Media";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
             {
                 path: "allScholarships",
                 element: <AllScholarship></AllScholarship>
+            },
+            {
+                path: "aboutUs",
+                element: <AboutUs></AboutUs>
+            },
+            {
+                path: "media",
+                element: <Media></Media>
             },
             {
                 path: 'scholarships/:id',
@@ -82,7 +92,7 @@ export const router = createBrowserRouter([
             //Moderator 
             {
                 path: "addScholarships",
-                element:  <ModeratorRoute><AddScholarship></AddScholarship></ModeratorRoute>
+                element: <ModeratorRoute><AddScholarship></AddScholarship></ModeratorRoute>
             },
             {
                 path: 'manageScholarships',

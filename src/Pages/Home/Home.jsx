@@ -3,6 +3,8 @@ import Banner from './Banner';
 import TopScholarships from './TopScholarships';
 import PartnerUniversities from './PartnerUniversities';
 import TestimonialsSection from './TestimonialsSection';
+import Faq from './Faq';
+import HowItWorks from './HowItWorks';
 
 const Home = () => {
     return (
@@ -11,6 +13,8 @@ const Home = () => {
             <TopScholarships></TopScholarships>
             <PartnerUniversities></PartnerUniversities>
             <TestimonialsSection></TestimonialsSection>
+            <Faq></Faq>
+            <HowItWorks></HowItWorks>
         </div>
     );
 };
