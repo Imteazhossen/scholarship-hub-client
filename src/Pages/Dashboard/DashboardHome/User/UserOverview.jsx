@@ -81,7 +81,7 @@ export default function UserOverview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
           {/* Pie Chart */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 shadow">
-            <h2 className="text-base sm:text-lg font-semibold mb-4 text-center">Application Status</h2>
+            <h2 className="text-base sm:text-lg font-semibold mb-4 text-center dark:text-black">Application Status</h2>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie
@@ -104,7 +104,7 @@ export default function UserOverview() {
 
           {/* Bar Chart */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 shadow">
-            <h2 className="text-base sm:text-lg font-semibold mb-4 text-center">Applications by Status</h2>
+            <h2 className="text-base sm:text-lg font-semibold mb-4 text-center dark:text-black">Applications by Status</h2>
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={statusData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -120,7 +120,7 @@ export default function UserOverview() {
 
         {/* Area Chart */}
         <div className="bg-white rounded-2xl p-4 sm:p-6 shadow">
-          <h2 className="text-base sm:text-lg font-semibold mb-4 text-center">Applications Over Time</h2>
+          <h2 className="text-base sm:text-lg font-semibold mb-4 text-center dark:text-black">Applications Over Time</h2>
           <ResponsiveContainer width="100%" height={250}>
             <AreaChart data={groupedTimeline}>
               <defs>

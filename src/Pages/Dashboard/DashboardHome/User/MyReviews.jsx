@@ -76,7 +76,7 @@ export default function MyReviews() {
   return (
     <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-        <h1 className="text-2xl font-bold mb-6 text-center">My Reviews</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center dark:text-black">My Reviews</h1>
 
         <div className="overflow-auto">
           <table className="min-w-full divide-y divide-gray-200">
@@ -89,7 +89,7 @@ export default function MyReviews() {
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y dark:text-black divide-gray-100">
               {reviews.map(r => (
                 <tr key={r._id}>
                   <td className="px-4 py-2">{r.scholarshipName}</td>

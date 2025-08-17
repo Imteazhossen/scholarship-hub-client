@@ -14,6 +14,7 @@ const Footer = () => {
                         Providing reliable scholarships since 2025
                     </p>
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                    <p>Copyright © {new Date().getFullYear()} - Developed By Md. Imteaz Hossen</p>
                 </aside>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

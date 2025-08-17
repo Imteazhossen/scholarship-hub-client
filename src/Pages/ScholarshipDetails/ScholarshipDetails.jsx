@@ -80,9 +80,9 @@ export default function ScholarshipDetails() {
                         <h1 className="text-3xl font-bold text-gray-800">{universityName}</h1>
 
                         <div className="flex flex-wrap gap-2">
-                            <span className="badge bg-pink-100 badge-lg">{scholarshipCategory}</span>
-                            <span className="badge bg-sky-100 badge-lg">{subjectCategory}</span>
-                            <span className="badge bg-emerald-100 badge-lg">World Rank: {worldRank}</span>
+                            <span className="badge dark:text-black bg-pink-100 badge-lg">{scholarshipCategory}</span>
+                            <span className="badge dark:text-black bg-sky-100 badge-lg">{subjectCategory}</span>
+                            <span className="badge dark:text-black bg-emerald-100 badge-lg">World Rank: {worldRank}</span>
                         </div>
 
                         <p className="flex items-center text-gray-600">
