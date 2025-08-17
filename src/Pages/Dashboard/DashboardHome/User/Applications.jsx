@@ -1,4 +1,3 @@
-// src/Pages/Dashboard/DashboardHome/User/Applications.jsx
 import React, { useState }                from 'react';
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query';
 import { useForm }                        from 'react-hook-form';
