@@ -30,6 +30,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Loading from "../Pages/SharedComponents/Loading/Loading";
 import AboutUs from "../Pages/About Us/AboutUs";
 import Media from "../Pages/About Us/Media/Media";
+import ModeratorOverview from "../Pages/Dashboard/DashboardHome/Moderator/ModeratorOverview";
+import UserOverview from "../Pages/Dashboard/DashboardHome/User/UserOverview";
 
 export const router = createBrowserRouter([
     {
@@ -89,10 +91,18 @@ export const router = createBrowserRouter([
                 path: 'myReviews',
                 element: <MyReviews></MyReviews>
             },
+            {
+                path: 'userOverview',
+                element: <UserOverview></UserOverview>
+            },
             //Moderator 
             {
                 path: "addScholarships",
                 element: <ModeratorRoute><AddScholarship></AddScholarship></ModeratorRoute>
+            },
+            {
+                path: "moderatorOverview",
+                element: <ModeratorRoute><ModeratorOverview></ModeratorOverview></ModeratorRoute>,
             },
             {
                 path: 'manageScholarships',

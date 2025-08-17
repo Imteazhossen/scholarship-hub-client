@@ -95,7 +95,7 @@ export default function AddScholarship() {
   };
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50">
+    <div className="min-h-screen rounded-2xl p-2 md:p-6 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6 text-sky-600">
           Add New Scholarship
@@ -196,7 +196,7 @@ export default function AddScholarship() {
           </div>
 
           {/* Dropdowns */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label className="label">
                 <span className="label-text">Subject Category</span>
@@ -252,7 +252,7 @@ export default function AddScholarship() {
           </div>
 
           {/* Fees & Charges */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="label">
                 <span className="label-text">Tuition Fees (optional)</span>
@@ -294,7 +294,7 @@ export default function AddScholarship() {
           </div>
 
           {/* Dates */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="label">
                 <span className="label-text">Application Deadline</span>

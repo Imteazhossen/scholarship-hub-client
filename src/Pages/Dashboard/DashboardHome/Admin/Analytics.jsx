@@ -71,10 +71,10 @@ export default function Analytics() {
   if (sLoading || aLoading) return <Loading></Loading>;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="max-w-6xl mx-auto space-y-12 px-4">
         <h1 className="text-4xl font-bold text-center text-gray-800">
-          Moderator Dashboard Analytics
+          Admin Dashboard Analytics
         </h1>
 
         <div className="grid gap-8 lg:grid-cols-2">

@@ -73,7 +73,7 @@ export default function Applications() {
     });
 
   return (
-    <div className="p-8 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <div className="md:p-8 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <h1 className="text-2xl font-bold mb-6 text-center">My Applications</h1>
       <div className="overflow-auto bg-white rounded-lg shadow">
         <table className="min-w-full divide-y divide-gray-200">

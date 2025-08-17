@@ -39,7 +39,7 @@ export default function AllReviews() {
     if (isError) return <p className="text-center py-8 text-red-500">Failed to load reviews.</p>;
 
     return (
-        <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+        <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
             <div className="max-w-6xl mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
                     All Reviews

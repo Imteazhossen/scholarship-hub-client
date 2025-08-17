@@ -74,7 +74,7 @@ export default function MyReviews() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="py-16 rounded-2xl bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         <h1 className="text-2xl font-bold mb-6 text-center">My Reviews</h1>
 

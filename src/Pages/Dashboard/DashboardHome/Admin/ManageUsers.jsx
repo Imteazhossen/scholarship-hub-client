@@ -71,7 +71,7 @@ export default function ManageUsers() {
     filter === 'all' ? users : users.filter(u => u.role === filter);
 
   return (
-    <div className="p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <div className="p-2 sm:p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Manage Users</h1>
         <select

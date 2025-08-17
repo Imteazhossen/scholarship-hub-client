@@ -53,7 +53,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-16 md:my-10 md:px-5 md:rounded-2xl bg-gray-50" id="faq">
+    <section className="py-16 md:my-10 px-5 md:px-5 md:rounded-2xl bg-gray-50" id="faq">
       <div className="w-full mx-auto text-center mb-12">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-800"

@@ -24,9 +24,9 @@ export default function Overview() {
     queryFn: () => api.get('/scholarships').then(r => r.data)
   });
 
-  if (aLoading || sLoading) return <Loading />;
+  // --- Hooks & Memos (always called, even during loading) ---
 
-  // Key metrics
+  // Total Applications
   const totalApplications = applications.length;
   const completedApplications = applications.filter(a => a.application_status === 'completed').length;
   const pendingApplications = applications.filter(a => a.application_status === 'pending').length;
@@ -45,20 +45,18 @@ export default function Overview() {
 
   // Applications by Degree
   const appsByDegree = useMemo(() => {
-    const degrees = ['Bachelor', 'Masters', 'PhD'];
+    const degrees = ['Bachelor','Masters','PhD'];
     return degrees.map(degree => ({
       name: degree,
-      value: applications.filter(app => app.applyingDegree === degree).length
+      value: applications.filter(a => a.applyingDegree === degree).length
     }));
   }, [applications]);
 
   // Applications by Status
-  const appsByStatus = useMemo(() => {
-    return [
-      { name: 'Completed', value: completedApplications },
-      { name: 'Pending', value: pendingApplications }
-    ];
-  }, [completedApplications, pendingApplications]);
+  const appsByStatus = useMemo(() => [
+    { name: 'Completed', value: completedApplications },
+    { name: 'Pending', value: pendingApplications }
+  ], [completedApplications, pendingApplications]);
 
   // Scholarships by Category
   const scholarshipsByCategory = useMemo(() => {
@@ -69,29 +67,32 @@ export default function Overview() {
     return Object.entries(counts).map(([name, value]) => ({ name, value }));
   }, [scholarships]);
 
+  // --- Loading guard ---
+  if (aLoading || sLoading) return <Loading />;
+
   return (
-    <section className="py-16 md:my-10 rounded-2xl bg-gradient-to-r from-gray-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="py-16 md:rounded-2xl md:my-10 bg-gradient-to-r from-pink-50 via-sky-100 to-emerald-50">
       <div className="max-w-6xl mx-auto space-y-12 px-4">
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-        Overview
+          Overview
         </h1>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <h2 className="text-lg font-medium text-gray-500">Total Scholarships</h2>
+            <h2 className="text-sm sm:text-lg font-medium text-gray-500">Total Scholarships</h2>
             <p className="text-2xl font-bold text-gray-800">{totalScholarships}</p>
           </div>
           <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <h2 className="text-lg font-medium text-gray-500">Total Applications</h2>
+            <h2 className="text-sm sm:text-lg font-medium text-gray-500">Total Applications</h2>
             <p className="text-2xl font-bold text-gray-800">{totalApplications}</p>
           </div>
           <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <h2 className="text-lg font-medium text-gray-500">Completed</h2>
+            <h2 className="text-sm sm:text-lg font-medium text-gray-500">Completed</h2>
             <p className="text-2xl font-bold text-green-600">{completedApplications}</p>
           </div>
           <div className="bg-white p-6 rounded-2xl shadow text-center">
-            <h2 className="text-lg font-medium text-gray-500">Pending</h2>
+            <h2 className="text-sm sm:text-lg font-medium text-gray-500">Pending</h2>
             <p className="text-2xl font-bold text-yellow-500">{pendingApplications}</p>
           </div>
         </div>

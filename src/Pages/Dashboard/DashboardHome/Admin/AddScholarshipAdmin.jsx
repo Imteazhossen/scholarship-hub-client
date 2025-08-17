@@ -137,7 +137,7 @@ export default function AddScholarshipAdmin() {
           </div>
 
           {/* Dropdowns */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
               <label className="label"><span className="label-text">Subject Category</span></label>
               <select
@@ -180,7 +180,7 @@ export default function AddScholarshipAdmin() {
           </div>
 
           {/* Fees & Charges */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="label"><span className="label-text">Tuition Fees (optional)</span></label>
               <input
@@ -212,7 +212,7 @@ export default function AddScholarshipAdmin() {
           </div>
 
           {/* Dates */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="label"><span className="label-text">Application Deadline</span></label>
               <input

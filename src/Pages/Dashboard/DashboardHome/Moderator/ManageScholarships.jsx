@@ -54,7 +54,7 @@ export default function ManageScholarship() {
   if (isError)  return <p className="text-center py-8 text-red-500">Failed to load.</p>;
 
   return (
-    <section className="p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
+    <section className="p-2 md:p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <h1 className="text-2xl font-bold mb-6 text-center">Manage Scholarships</h1>
 
       <div className="overflow-auto bg-white rounded-lg shadow">

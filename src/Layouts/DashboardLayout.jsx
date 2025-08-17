@@ -36,7 +36,7 @@ export default function DashboardLayout() {
                     <label htmlFor="dashboard-drawer" className="btn btn-ghost lg:hidden mr-4">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6"
+                            className="h-6 -ml-6  w-6"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -47,8 +47,8 @@ export default function DashboardLayout() {
 
                     {/* Logo */}
                     <div className='flex'>
-                        <FaGoogleScholar size={28} className="text-sky-600 mr-5" />
-                        <span className="text-xl font-extrabold text-gray-800">
+                        <FaGoogleScholar size={28} className="text-sky-600 mt-2 sm:mt-0 sm:-ml-0 -ml-5 mr-5" />
+                        <span className="text-md -ml-2 font-extrabold text-gray-800">
                             Scholarship Hub
                         </span>
                     </div>
@@ -63,7 +63,7 @@ export default function DashboardLayout() {
                 </header>
 
                 {/* Main Outlet */}
-                <main className="p-6 flex-1 overflow-auto">
+                <main className="px-2 my-2 md:p-6 flex-1 overflow-auto">
                     <Outlet />
                 </main>
             </div>
@@ -106,6 +106,11 @@ export default function DashboardLayout() {
                                             <FaCommentDots className="mr-3 text-sky-600" /> My Reviews
                                         </NavLink>
                                     </li>
+                                    <li>
+                                        <NavLink to="/dashboard/userOverview" className={linkClasses}>
+                                            <FaChartLine className="mr-3 text-sky-600" />  Overview
+                                        </NavLink>
+                                    </li>
                                 </>
                             )}
 
@@ -135,6 +140,11 @@ export default function DashboardLayout() {
                                     <li>
                                         <NavLink to="/dashboard/allReviews" className={linkClasses}>
                                             <FaCommentDots className="mr-3 text-sky-600" /> All Reviews
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/moderatorOverview" className={linkClasses}>
+                                            <FaChartLine className="mr-3 text-sky-600" /> Overview
                                         </NavLink>
                                     </li>
                                 </>
@@ -175,7 +185,7 @@ export default function DashboardLayout() {
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/analytics" className={linkClasses}>
-                                            <FaChartLine className="mr-3 text-sky-600" /> Analytics
+                                            <FaChartLine className="mr-3 text-sky-600" /> Overview
                                         </NavLink>
                                     </li>
                                 </>
