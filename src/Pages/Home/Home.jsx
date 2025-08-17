@@ -5,6 +5,8 @@ import PartnerUniversities from './PartnerUniversities';
 import TestimonialsSection from './TestimonialsSection';
 import Faq from './Faq';
 import HowItWorks from './HowItWorks';
+import Webinars from './Webinars';
+import Overview from './Overview';
 
 const Home = () => {
     return (
@@ -13,8 +15,10 @@ const Home = () => {
             <TopScholarships></TopScholarships>
             <PartnerUniversities></PartnerUniversities>
             <TestimonialsSection></TestimonialsSection>
-            <Faq></Faq>
             <HowItWorks></HowItWorks>
+            <Webinars></Webinars>
+            <Overview></Overview>
+            <Faq></Faq>
         </div>
     );
 };
