@@ -47,7 +47,7 @@ export default function DashboardLayout() {
 
                     {/* Logo */}
                     <div className='flex'>
-                        <FaGoogleScholar size={28} className="text-sky-600 mt-2 sm:mt-0 sm:-ml-0 -ml-5 mr-5" />
+                        <FaGoogleScholar size={28} className="text-black mt-2 sm:mt-0 sm:-ml-0 -ml-5 mr-5" />
                         <span className="text-md -ml-2 font-extrabold text-gray-800">
                             Scholarship Hub
                         </span>
@@ -56,7 +56,7 @@ export default function DashboardLayout() {
 
                     {/* Role Badge */}
                     {!roleLoading && (
-                        <span className="badge badge-outline capitalize text-sky-600 font-semibold">
+                        <span className="badge badge-outline capitalize text-black font-semibold">
                             {role || 'guest'}
                         </span>
                     )}
@@ -74,7 +74,7 @@ export default function DashboardLayout() {
 
                 <aside className="w-60 bg-white shadow-lg flex flex-col">
                     <div className="p-4 flex justify-center items-center space-x-2 border-b-2 border-sky-500">
-                        <FaGoogleScholar size={28} className="text-sky-600" />
+                        <FaGoogleScholar size={28} className="text-black" />
                         <span className='font-bold'>Explore Here!</span>
 
                     </div>
@@ -84,7 +84,7 @@ export default function DashboardLayout() {
                             {/* Always visible */}
                             <li>
                                 <NavLink to="/" className={linkClasses}>
-                                    <FaHome className="mr-3 text-sky-600" size={20} /> Home
+                                    <FaHome className="mr-3 text-black" size={20} /> Home
                                 </NavLink>
                             </li>
 
@@ -93,22 +93,22 @@ export default function DashboardLayout() {
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
-                                            <FaUser className="mr-3 text-sky-600" /> My Profile
+                                            <FaUser className="mr-3 text-black" /> My Profile
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/applications" className={linkClasses}>
-                                            <FaClipboardList className="mr-3 text-sky-600" /> My Applications
+                                            <FaClipboardList className="mr-3 text-black" /> My Applications
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/myReviews" className={linkClasses}>
-                                            <FaCommentDots className="mr-3 text-sky-600" /> My Reviews
+                                            <FaCommentDots className="mr-3 text-black" /> My Reviews
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/userOverview" className={linkClasses}>
-                                            <FaChartLine className="mr-3 text-sky-600" />  Overview
+                                            <FaChartLine className="mr-3 text-black" />  Overview
                                         </NavLink>
                                     </li>
                                 </>
@@ -119,32 +119,32 @@ export default function DashboardLayout() {
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
-                                            <FaUser className="mr-3 text-sky-600" /> My Profile
+                                            <FaUser className="mr-3 text-black" /> My Profile
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/manageScholarships" className={linkClasses}>
-                                            <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
+                                            <FaUniversity className="mr-3 text-black" /> Manage Scholarships
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/addScholarships" className={linkClasses}>
-                                            <FaPlusCircle className="mr-3 text-sky-600" /> Add Scholarship
+                                            <FaPlusCircle className="mr-3 text-black" /> Add Scholarship
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/allAppliedScholarship" className={linkClasses}>
-                                            <FaClipboardList className="mr-3 text-sky-600" /> All Applications
+                                            <FaClipboardList className="mr-3 text-black" /> All Applications
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/allReviews" className={linkClasses}>
-                                            <FaCommentDots className="mr-3 text-sky-600" /> All Reviews
+                                            <FaCommentDots className="mr-3 text-black" /> All Reviews
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/moderatorOverview" className={linkClasses}>
-                                            <FaChartLine className="mr-3 text-sky-600" /> Overview
+                                            <FaChartLine className="mr-3 text-black" /> Overview
                                         </NavLink>
                                     </li>
                                 </>
@@ -155,37 +155,37 @@ export default function DashboardLayout() {
                                 <>
                                     <li>
                                         <NavLink to="/dashboard/myProfile" className={linkClasses}>
-                                            <FaUser className="mr-3 text-sky-600" /> Admin Profile
+                                            <FaUser className="mr-3 text-black" /> Admin Profile
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/manageUsers" className={linkClasses}>
-                                            <FaUsers className="mr-3 text-sky-600" /> Manage Users
+                                            <FaUsers className="mr-3 text-black" /> Manage Users
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/addScholarshipAdmin" className={linkClasses}>
-                                            <FaUniversity className="mr-3 text-sky-600" /> Add Scholarships
+                                            <FaUniversity className="mr-3 text-black" /> Add Scholarships
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/manageAppliedApplication" className={linkClasses}>
-                                            <FaClipboardList className="mr-3 text-sky-600" /> Manage Applied Applications
+                                            <FaClipboardList className="mr-3 text-black" /> Manage Applied Applications
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/manageScholarshipsAdmin" className={linkClasses}>
-                                            <FaUniversity className="mr-3 text-sky-600" /> Manage Scholarships
+                                            <FaUniversity className="mr-3 text-black" /> Manage Scholarships
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/manageReviews" className={linkClasses}>
-                                            <FaCommentDots className="mr-3 text-sky-600" /> Manage Reviews
+                                            <FaCommentDots className="mr-3 text-black" /> Manage Reviews
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/analytics" className={linkClasses}>
-                                            <FaChartLine className="mr-3 text-sky-600" /> Overview
+                                            <FaChartLine className="mr-3 text-black" /> Overview
                                         </NavLink>
                                     </li>
                                 </>
