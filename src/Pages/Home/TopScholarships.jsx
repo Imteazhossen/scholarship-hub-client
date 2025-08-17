@@ -71,7 +71,7 @@ export default function TopScholarships() {
                     to={`/scholarships/${s._id}`}
                     className="block text-center mt-4 text-white bg-sky-500 rounded-full py-2 hover:bg-sky-600 transition"
                   >
-                    Details
+                    See more 
                   </NavLink>
                 </div>
               </div>

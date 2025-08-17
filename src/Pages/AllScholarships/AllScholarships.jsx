@@ -126,7 +126,7 @@ export default function AllScholarship() {
                           to={`/scholarships/${s._id}`}
                           className="block text-center mt-4 py-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition"
                         >
-                          Details
+                          See more
                         </NavLink>
                       </div>
                     </div>
