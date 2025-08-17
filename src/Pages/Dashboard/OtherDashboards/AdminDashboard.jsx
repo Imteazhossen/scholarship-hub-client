@@ -113,7 +113,7 @@ function StatCard({ icon, label, value }) {
     <div className="flex items-center space-x-4 bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
       <div className="p-3 bg-sky-50 rounded-full">{icon}</div>
       <div>
-        <p className="text-2xl font-semibold">{value}</p>
+        <p className="text-2xl font-semibold dark:text-black">{value}</p>
         <p className="text-gray-600">{label}</p>
       </div>
     </div>

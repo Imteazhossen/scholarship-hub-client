@@ -80,7 +80,7 @@ export default function Analytics() {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Applications by Status */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Applications by Status</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Applications by Status</h2>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie
@@ -105,7 +105,7 @@ export default function Analytics() {
 
           {/* Scholarships by Category */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Scholarships by Category</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Scholarships by Category</h2>
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={scholarshipsByCategory}>
                 <XAxis dataKey="name" />
@@ -120,7 +120,7 @@ export default function Analytics() {
 
         {/* Applications Over Time */}
         <div className="bg-white p-6 rounded-2xl shadow">
-          <h2 className="text-2xl font-semibold mb-4">Applications Over Time</h2>
+          <h2 className="text-2xl font-semibold mb-4 dark:text-black">Applications Over Time</h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={appsOverTime}>
               <CartesianGrid strokeDasharray="3 3" />

@@ -37,7 +37,7 @@ const Webinars = () => {
     return (
         <section className="py-16 px-4 md:px-12 bg-gradient-to-r from-pink-50 via-sky-50 to-emerald-50 rounded-2xl">
             <motion.h2
-                className="text-4xl font-bold text-center mb-8"
+                className="text-4xl font-bold text-center mb-8 dark:text-black"
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -68,7 +68,7 @@ const Webinars = () => {
                         >
                             <img src={webinar.img} alt={webinar.title} className="w-full h-48 object-cover" />
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">{webinar.title}</h3>
+                                <h3 className="text-xl font-semibold mb-2 dark:text-black">{webinar.title}</h3>
                                 <div className="flex items-center gap-3 text-gray-600 mb-2">
                                     <FaCalendarAlt /> <span>{webinar.date} | {webinar.time}</span>
                                 </div>

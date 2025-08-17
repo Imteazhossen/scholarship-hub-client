@@ -79,7 +79,7 @@ export default function ModeratorDashboard() {
             className="w-16 h-16 rounded-full object-cover"
           />
           <div>
-            <h1 className="text-2xl font-bold">{user.displayName}</h1>
+            <h1 className="text-2xl font-bold  dark:text-black">{user.displayName}</h1>
             <p className="text-gray-600">{user.email}</p>
             {user.role && (
               <p className="mt-1 inline-block px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm">
@@ -90,9 +90,9 @@ export default function ModeratorDashboard() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 dark:text-black sm:grid-cols-2 gap-6">
           <StatCard
-            icon={<FaUniversity size={30} className="text-indigo-500" />}
+            icon={<FaUniversity size={30} className="text-indigo-500 " />}
             label="Total Scholarships"
             value={totalSch}
           />

@@ -64,7 +64,7 @@ export default function AllScholarship() {
               value={searchInput}
               onChange={e => setSearchInput(e.target.value)}
               placeholder="Search by scholarship, university, or degree"
-              className="input input-bordered w-full mr-2"
+              className="input input-bordered w-full mr-2 dark:bg-sky-50 dark:text-black border-sky-300"
             />
             <button type="submit" className="btn bg-sky-500 text-white hover:bg-sky-600 px-4">
               <FaSearch className="mr-2" /> Search
@@ -75,13 +75,13 @@ export default function AllScholarship() {
           <div className="flex space-x-2">
             <button
               onClick={() => setSortOrder('asc')}
-              className={`btn btn-sm ${sortOrder === 'asc' ? 'bg-sky-500 text-white' : ''}`}
+              className={`btn btn-sm dark:bg-sky-500 dark:text-white  ${sortOrder === 'asc' ? 'bg-sky-500  text-white' : ''}`}
             >
               <FaSortAmountDown className="mr-1" /> Sort by ascending fees
             </button>
             <button
               onClick={() => setSortOrder('desc')}
-              className={`btn btn-sm ${sortOrder === 'desc' ? 'bg-sky-500 text-white' : ''}`}
+              className={`btn btn-sm dark:bg-sky-500 dark:text-white ${sortOrder === 'desc' ? 'bg-sky-500 text-white' : ''}`}
             >
               <FaSortAmountUp className="mr-1" /> Sort by descending fees
             </button>

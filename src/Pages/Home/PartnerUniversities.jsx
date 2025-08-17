@@ -34,8 +34,8 @@ const partners = [
 
 export default function PartnerUniversities() {
   return (
-    <section className="py-12 bg-gray-50">
-      <h2 className="text-4xl  font-bold text-center mb-4">
+    <section className="py-12 sm:my-10 rounded-2xl bg-gray-50">
+      <h2 className="text-4xl  font-bold text-center mb-4 dark:text-black">
         Our Partner Universities
       </h2>
       <p className="text-center px-4 text-gray-600 mb-8">

@@ -55,7 +55,7 @@ export default function ManageScholarship() {
 
   return (
     <section className="p-2 md:p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6 text-center">Manage Scholarships</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center dark:text-black">Manage Scholarships</h1>
 
       <div className="overflow-auto bg-white rounded-lg shadow">
         <table className="min-w-full divide-y divide-gray-200">
@@ -68,7 +68,7 @@ export default function ManageScholarship() {
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody  className="divide-y dark:text-black divide-gray-100">
             {list.map(s => (
               <tr key={s._id}>
                 <td className="px-4 py-4">{s.name}</td>

@@ -73,7 +73,7 @@ const Media = () => {
             >
               <img src={item.img} alt={item.title} className="w-full h-48 object-cover" />
               <div className="p-4">
-                <h3 className="font-semibold text-lg">{item.title}</h3>
+                <h3 className="font-semibold dark:text-black text-lg">{item.title}</h3>
               </div>
             </motion.a>
           ))}
@@ -87,7 +87,7 @@ const Media = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
-        <h2 className="text-3xl font-bold flex items-center gap-2 mb-6">
+        <h2 className="text-3xl font-bold  flex items-center gap-2 mb-6">
           <FaPodcast className="text-green-600" /> Podcasts
         </h2>
         <ul className="space-y-4">
@@ -95,7 +95,7 @@ const Media = () => {
             <motion.li
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-white shadow-md p-4 rounded-xl hover:bg-gray-100"
+              className="bg-white dark:text-black shadow-md p-4 rounded-xl hover:bg-gray-100"
             >
               <a href={podcast.link} target="_blank" rel="noopener noreferrer">
                 🎧 {podcast.title}
@@ -118,14 +118,14 @@ const Media = () => {
         <Swiper spaceBetween={20} slidesPerView={1} autoplay={{ delay: 2500 }}>
           <SwiperSlide>
             <div className="p-6 bg-blue-50 rounded-2xl shadow">
-              <p className="text-lg">
+              <p className="text-lg dark:text-black">
                 📢 ScholarshipHub is proud to announce new collaborations with universities worldwide.
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="p-6 bg-blue-50 rounded-2xl shadow">
-              <p className="text-lg">
+              <p className="text-lg dark:text-black">
                 🌍 Our platform now covers over 100+ international scholarships!
               </p>
             </div>
@@ -152,7 +152,7 @@ const Media = () => {
             >
               <img src={award.img} alt={award.title} className="w-full h-40 object-cover" />
               <div className="p-4">
-                <h3 className="font-semibold text-lg">{award.title}</h3>
+                <h3 className="font-semibold text-lg dark:text-black">{award.title}</h3>
               </div>
             </motion.div>
           ))}

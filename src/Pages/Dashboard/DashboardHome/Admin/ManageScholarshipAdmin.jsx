@@ -71,7 +71,7 @@ export default function ManageScholarshipAdmin() {
           Manage Scholarships
         </h2>
         <div className="overflow-auto bg-white rounded-lg shadow">
-          <table className="min-w-full divide-y divide-gray-200">
+          <table className="min-w-full dark:text-black  divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 {[
@@ -91,7 +91,7 @@ export default function ManageScholarshipAdmin() {
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y  divide-gray-100">
               {list.map(s => (
                 <tr key={s._id}>
                   <td className="px-4 py-2 text-sm">{s.name}</td>

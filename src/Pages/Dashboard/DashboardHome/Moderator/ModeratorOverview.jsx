@@ -113,10 +113,10 @@ export default function ModeratorOverview() {
           <img
             src={user.photoURL || "/default-avatar.png"}
             alt={user.displayName}
-            className="w-20 h-20 rounded-full object-cover mx-auto sm:mx-0"
+            className="w-20 h-20 rounded-full  object-cover mx-auto sm:mx-0"
           />
           <div className="text-center sm:text-left">
-            <h1 className="text-2xl font-bold">{user.displayName}</h1>
+            <h1 className="text-2xl font-bold dark:text-black">{user.displayName}</h1>
             <p className="text-gray-600">{user.email}</p>
             {user.role && (
               <p className="mt-2 inline-block px-4 py-1 bg-sky-100 text-sky-700 rounded-full text-sm">
@@ -127,7 +127,7 @@ export default function ModeratorOverview() {
         </div>
 
         {/* Overview Stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid dark:text-black grid-cols-1 sm:grid-cols-3 gap-6">
           <StatCard
             icon={<FaUniversity size={28} className="text-indigo-500" />}
             label="Scholarships"

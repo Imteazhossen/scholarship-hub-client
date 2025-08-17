@@ -99,7 +99,7 @@ export default function ManageAppliedApplication() {
           <select
             value={sortKey}
             onChange={e => setSortKey(e.target.value)}
-            className="select select-bordered w-64"
+            className="select dark:text-black dark:bg-sky-50 border-sky-300 select-bordered w-64"
           >
             <option value="">-- Sort / Filter --</option>
             <option value="applied-newest">Applied Date (Newest)</option>
@@ -111,7 +111,7 @@ export default function ManageAppliedApplication() {
 
         {/* --- Table --- */}
         <div className="overflow-auto bg-white rounded-lg shadow">
-          <table className="min-w-full divide-y divide-gray-200">
+          <table className="min-w-full dark:text-black divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 {[

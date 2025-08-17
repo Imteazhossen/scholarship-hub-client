@@ -40,7 +40,7 @@ const HowItWorks = () => {
   return (
     <section className="py-16  md:rounded-2xl md:my-10 bg-gradient-to-r from-pink-50 via-sky-50 to-emerald-50 rounded-2xl px-4 md:px-12">
       <motion.h2
-        className="text-4xl font-bold text-center mb-8"
+        className="text-4xl font-bold text-center mb-8 dark:text-black"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -55,7 +55,7 @@ const HowItWorks = () => {
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
+            className="bg-white dark:text-black rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -101,7 +101,7 @@ export default function Overview() {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Popular Scholarships */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Popular Scholarships</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Popular Scholarships</h2>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={popularScholarships}>
                 <XAxis dataKey="name" tick={{ fontSize: 12 }} interval={0} angle={-30} textAnchor="end" />
@@ -115,7 +115,7 @@ export default function Overview() {
 
           {/* Applications by Degree */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Applications by Degree</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Applications by Degree</h2>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
@@ -137,7 +137,7 @@ export default function Overview() {
 
           {/* Applications by Status */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Applications by Status</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Applications by Status</h2>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
@@ -160,7 +160,7 @@ export default function Overview() {
 
           {/* Scholarships by Category */}
           <div className="bg-white p-6 rounded-2xl shadow">
-            <h2 className="text-2xl font-semibold mb-4">Scholarships by Category</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Scholarships by Category</h2>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={scholarshipsByCategory}>
                 <XAxis dataKey="name" />

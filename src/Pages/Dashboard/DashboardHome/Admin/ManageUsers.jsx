@@ -73,11 +73,11 @@ export default function ManageUsers() {
   return (
     <div className="p-2 sm:p-8 bg-gradient-to-r rounded-2xl from-pink-50 via-sky-100 to-emerald-50 min-h-screen">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Manage Users</h1>
+        <h1 className="text-2xl dark:text-black font-bold">Manage Users</h1>
         <select
           value={filter}
           onChange={e => setFilter(e.target.value)}
-          className="select select-bordered w-48"
+          className="select dark:text-black select-bordered w-48"
         >
           <option value="all">All Roles</option>
           <option value="user">User</option>
@@ -87,7 +87,7 @@ export default function ManageUsers() {
       </div>
 
       <div className="overflow-auto bg-white rounded-lg shadow">
-        <table className="min-w-full shadow-lg table-auto">
+        <table className="min-w-full dark:text-black shadow-lg table-auto">
           <thead className="bg-gray-50">
             <tr className='border-b border-emerald-400'>
               <th className="px-4 py-2">Name</th>
@@ -107,7 +107,7 @@ export default function ManageUsers() {
                     onChange={e =>
                       updateRole.mutate({ id: u._id, role: e.target.value })
                     }
-                    className="select select-bordered"
+                    className="select bg-sky-50 border-sky-300 select-bordered"
                   >
                     <option value="user">User</option>
                     <option value="moderator">Moderator</option>

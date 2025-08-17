@@ -55,7 +55,7 @@ export default function Login() {
               <input
                 type="email"
                 {...register('email', { required: 'Email is required' })}
-                className="input input-bordered w-full mt-1"
+                className="input input-bordered w-full mt-1 "
                 placeholder="you@example.com"
               />
               {errors.email && (

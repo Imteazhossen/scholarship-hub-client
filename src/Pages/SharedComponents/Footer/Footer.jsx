@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Footer = () => {
     return (
         <div>
-            <footer className="rounded-2xl font-inter footer footer-horizontal footer-center bg-gradient-to-r from-pink-50 from-10% via-sky-100 via-30% to-emerald-50 to-90% p-10">
+            <footer className="rounded-2xl dark:text-black font-inter footer footer-horizontal footer-center bg-gradient-to-r from-pink-50 from-10% via-sky-100 via-30% to-emerald-50 to-90% p-10">
                 <aside>
                     <FaGoogleScholar size={50} />
                     <p className="font-extrabold">

@@ -100,15 +100,15 @@ export default function AddScholarship() {
         <h2 className="text-2xl font-bold text-center mb-6 text-sky-600">
           Add New Scholarship
         </h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 ">
           {/* Scholarship Name */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">Scholarship Name</span>
             </label>
             <input
               {...register('name', { required: 'Required' })}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full dark:text-black bg-sky-50 border-sky-300"
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name.message}</p>
@@ -117,12 +117,12 @@ export default function AddScholarship() {
 
           {/* University Name */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">University Name</span>
             </label>
             <input
               {...register('universityName', { required: 'Required' })}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-sky-50 border-sky-300"
             />
             {errors.universityName && (
               <p className="text-red-500 text-sm">
@@ -133,14 +133,14 @@ export default function AddScholarship() {
 
           {/* University Logo */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">University Logo</span>
             </label>
             <input
               type="file"
               {...register('logo', { required: 'Upload required' })}
               accept="image/*"
-              className="file-input file-input-bordered w-full"
+              className="file-input file-input-bordered w-full bg-sky-50 border-sky-300"
             />
             {errors.logo && (
               <p className="text-red-500 text-sm">{errors.logo.message}</p>
@@ -150,24 +150,24 @@ export default function AddScholarship() {
           {/* Country & City */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Country</span>
               </label>
               <input
                 {...register('country', { required: 'Required' })}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
               {errors.country && (
                 <p className="text-red-500 text-sm">{errors.country.message}</p>
               )}
             </div>
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">City</span>
               </label>
               <input
                 {...register('city', { required: 'Required' })}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
               {errors.city && (
                 <p className="text-red-500 text-sm">{errors.city.message}</p>
@@ -177,7 +177,7 @@ export default function AddScholarship() {
 
           {/* University World Rank */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">University World Rank</span>
             </label>
             <input
@@ -186,7 +186,7 @@ export default function AddScholarship() {
                 required: 'Required',
                 min: { value: 1, message: 'Must be ≥ 1' },
               })}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-sky-50 border-sky-300"
             />
             {errors.worldRank && (
               <p className="text-red-500 text-sm">
@@ -198,12 +198,12 @@ export default function AddScholarship() {
           {/* Dropdowns */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Subject Category</span>
               </label>
               <select
                 {...register('subjectCategory', { required: true })}
-                className="select select-bordered w-full"
+                className="select select-bordered w-full dark:text-black bg-sky-50 border-sky-300"
               >
                 <option value="">Select...</option>
                 <option>Agriculture</option>
@@ -215,12 +215,12 @@ export default function AddScholarship() {
               )}
             </div>
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Scholarship Category</span>
               </label>
               <select
                 {...register('scholarshipCategory', { required: true })}
-                className="select select-bordered w-full"
+                className="select select-bordered w-full dark:text-black bg-sky-50 border-sky-300"
               >
                 <option value="">Select...</option>
                 <option>Full fund</option>
@@ -232,12 +232,12 @@ export default function AddScholarship() {
               )}
             </div>
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Degree</span>
               </label>
               <select
                 {...register('degree', { required: true })}
-                className="select select-bordered w-full"
+                className="select select-bordered w-full dark:text-black bg-sky-50 border-sky-300"
               >
                 <option value="">Select...</option>
                 <option>Diploma</option>
@@ -254,23 +254,23 @@ export default function AddScholarship() {
           {/* Fees & Charges */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Tuition Fees (optional)</span>
               </label>
               <input
                 type="number"
                 {...register('tuitionFees')}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
             </div>
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Application Fees</span>
               </label>
               <input
                 type="number"
                 {...register('applicationFees', { required: true })}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
               {errors.applicationFees && (
                 <p className="text-red-500 text-sm">Required</p>
@@ -280,13 +280,13 @@ export default function AddScholarship() {
 
           {/* Service Charge */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">Service Charge</span>
             </label>
             <input
               type="number"
               {...register('serviceCharge', { required: true })}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-sky-50 border-sky-300"
             />
             {errors.serviceCharge && (
               <p className="text-red-500 text-sm">Required</p>
@@ -296,26 +296,26 @@ export default function AddScholarship() {
           {/* Dates */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Application Deadline</span>
               </label>
               <input
                 type="date"
                 {...register('applicationDeadline', { required: true })}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
               {errors.applicationDeadline && (
                 <p className="text-red-500 text-sm">Required</p>
               )}
             </div>
             <div>
-              <label className="label">
+              <label className="label dark:text-black">
                 <span className="label-text">Post Date</span>
               </label>
               <input
                 type="date"
                 {...register('postDate', { required: true })}
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-sky-50 border-sky-300"
               />
               {errors.postDate && (
                 <p className="text-red-500 text-sm">Required</p>
@@ -325,14 +325,14 @@ export default function AddScholarship() {
 
           {/* Posted By */}
           <div>
-            <label className="label">
+            <label className="label dark:text-black">
               <span className="label-text">Posted By</span>
             </label>
             <input
               {...register('postedBy')}
               value={user.email || ''}
               readOnly
-              className="input input-bordered w-full bg-gray-100"
+              className="input input-bordered w-full bg-gray-100 bg-sky-50 border-sky-300"
             />
           </div>
 

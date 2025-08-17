@@ -311,8 +311,8 @@ export default function AboutUs() {
                         Start your journey today. Find scholarships that fit you, and apply
                         with confidence.
                     </p>
-                    <Link to='/login'> <button className="mt-4 btn bg-sky-500 hover:bg-sky-600 hover:scale-110 transition ease-in-out duration-300 text-white rounded-full px-6">
-                        Get Started
+                    <Link to='/allScholarships'> <button className="mt-4 btn bg-sky-500 hover:bg-sky-600 hover:scale-110 transition ease-in-out duration-300 text-white rounded-full px-6">
+                        Find Your Scholarship
                     </button>
                     </Link>
                 </motion.div>

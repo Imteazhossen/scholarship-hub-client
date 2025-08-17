@@ -99,7 +99,7 @@ export default function AllAppliedScholarship() {
           <select
             value={sortKey}
             onChange={e => setSortKey(e.target.value)}
-            className="select select-bordered w-64"
+            className="select select-bordered w-64 bg-sky-50 border-sky-300 dark:text-black"
           >
             <option value="">-- Sort / Filter --</option>
             <option value="applied-newest">Applied Date (Newest)</option>
@@ -111,7 +111,7 @@ export default function AllAppliedScholarship() {
 
         {/* --- Table --- */}
         <div className="overflow-auto bg-white rounded-lg shadow">
-          <table className="min-w-full divide-y divide-gray-200">
+          <table className="min-w-full s divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 {[
@@ -132,7 +132,7 @@ export default function AllAppliedScholarship() {
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y dark:text-black divide-gray-100">
               {sortedApps.map(a => (
                 <tr key={a._id}>
                   <td className="px-4 py-2 text-sm">{a.universityName}</td>
