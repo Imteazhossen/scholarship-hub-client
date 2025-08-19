@@ -65,7 +65,7 @@
 - Analytics chart (basic data visualization)
 - Global Scholarship & Application Management
 
-### 📈 Bonus/Challenge Tasks
+### 📈 Challenge Tasks
 - JWT Integration with access protection
 - Axios interceptor
 - Pagination in All Scholarships
@@ -93,7 +93,7 @@
 ### ⚙️ Backend
 - Node.js
 - Express.js
-- MongoDB (with Mongoose)
+- MongoDB 
 - CORS, Dotenv
 - JWT for protected API routes
 
